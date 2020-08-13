@@ -53,7 +53,8 @@ class OPERACLI(CLIArgs, OPERAResults):
 			"-s", smiles_filename,  # sets input smiles file
 			"-o", predictions_filename,  # sets output csv file
 			# "-c",  # cleans temp files from calculations
-			"-a"])  # gets all opera properties
+			"-a",  # gets all opera properties
+			"-v", 2])  # verbose (0=silent, 1=minimum details, 2=fuill details)
 			# "-e", "HL", "LogP", "MP", "BP", "LogVP", "LogWS", "pKa", "LogD", "LogBCF", "LogKoc"])
 
 	def execute_opera_linux(self, smiles_filename, predictions_filename):
@@ -65,7 +66,8 @@ class OPERACLI(CLIArgs, OPERAResults):
 			self.matlab_path,
 			"-s", smiles_filename,  # sets input smiles file
 			"-o", predictions_filename,  # sets output csv file
-			"-a"])  # gets all opera properties
+			"-a",  # gets all opera properties
+			"-v", 2])  # verbose (0=silent, 1=minimum details, 2=fuill details)
 			# "-e", "HL", "LogP", "MP", "BP", "LogVP", "LogWS", "pKa", "LogD", "LogBCF", "LogKoc"])		
 
 	def create_smiles_tempfile(self, smiles_list):
